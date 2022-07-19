@@ -1,0 +1,224 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+#left {
+    width: 18%;
+    height: 100%;
+    background-color: rgb(46, 46, 46);
+    border-right: 1px solid rgba(102, 102, 102, 0.226);
+
+}
+
+#uploads {
+    padding: 10px 12px;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.226);
+}
+
+#uploads h3 {
+    color: rgba(216, 216, 216, 0.815);
+    font-size: 1.4vw;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: context-menu;
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+}
+
+#icons i {
+    color: rgba(216, 216, 216, 0.815);
+    margin-left: .6vw;
+    padding: 2px 3.5px;
+    font-size: 1.3vw;
+    border-radius: 4px;
+}
+
+#icons i:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.123);
+}
+
+#newfile {
+    padding: 5px 20px;
+}
+
+#nfinput {
+    display: none;
+    background-color: transparent;
+    border: 2.5px solid rgb(95, 95, 95);
+    border-radius: 2px;
+}
+
+input:focus {
+    color: aliceblue;
+}
+
+#files {
+    margin-top: -3px;
+    padding: 0px 20px;
+}
+
+#files h4 {
+    color: rgba(216, 216, 216, 0.925);
+    font-weight: 400;
+    font-size: 1.2vw;
+    margin-bottom: 0.7vw;
+    display: flex;
+    align-items: center;
+}
+
+#files h4:hover {
+    border-left: solid rgb(150, 220, 238);
+}
+
+#files a {
+    text-decoration: none;
+}
+
+#red {
+    color: rgb(238, 95, 95) !important;
+}
+
+#blue {
+    color: rgb(93, 125, 231) !important;
+}
+
+#default {
+    color: rgba(216, 216, 216, 0.925) !important;
+}
+
+/* right */
+
+#right {
+    width: 82%;
+    height: 100%;
+    background-color: #222;
+    color: aliceblue;
+    position: relative;
+}
+
+#right h5 {
+    color: rgb(235, 235, 235);
+    font-weight: 400;
+    font-size: 3vw;
+    /* position: absolute; */
+
+}
+
+#rnav{
+    width: 100%;
+    height: 6.5%;
+    background-color: rgb(46, 46, 46);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+#nfilename {
+    height: 100%;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 1px solid rgba(102, 102, 102, 0.226); */
+}
+
+#nfilename h3{
+    margin: 10px 12px;
+    margin-bottom: 6px;
+    color: rgba(216, 216, 216, 0.815);
+    font-size: 1.4vw;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: context-menu;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(102, 102, 102, 0.226);
+}
+
+#nfilename i{
+    margin-left: 10px;
+    color: rgba(216, 216, 216, 0.815);
+}
+
+#nfilename a{
+    text-decoration: none;
+    height: 100%;
+    padding: 0px 5px;
+}
+
+#textform{
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+#writetext{
+    resize: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: rgba(216, 216, 216, 0.918);
+    background-color: transparent;
+    width: 100%;
+    min-height: 93.5vh;
+    padding: 10px 20px;
+    font-size: 17px;
+    position: absolute;
+    top: 6.5%;
+}
+
+#textsubmit{
+    position: absolute;
+    top: 3.25%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgb(61, 61, 61);
+    border: none;
+    color: rgba(216, 216, 216, 0.815);
+    padding: 3px 10px 5px 10px;
+    cursor: pointer;
+    border-radius: 2.5px;
+}

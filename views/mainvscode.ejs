@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/mainvscode.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Visual Studio clone</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="left">
+        <div id="uploads">
+          <h3>uploads</h3>
+          <div id="icons">
+            <i id="newfilei" class="ri-file-add-line"></i>
+            <i class="ri-folder-3-fill"></i>
+            <i class="ri-refresh-line"></i>
+          </div>
+        </div>
+        <form id="newfile" autocomplete="off" action="/newfile" >
+          <input id="nfinput" name="filename" type="text" placeholder="New file">
+        </form>
+        <div id="files">
+          <div id="file">
+            <% files.forEach(function(filename){ %>
+              <a href="/files/<%=filename%>"><h4 id="<%= filename.split('.')[1] === 'html' ? 'blue' : filename.split('.')[1] === 'css' ?  'red' : 'default' %>">
+                <i class="ri-arrow-right-s-line"></i><%= filename%></h4></a>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <h5>Let's begin our new journey</h5>
+      </div>
+    </div>
+    <script src="/js/mainscript.js"></script>
+  </body>
+</html>
