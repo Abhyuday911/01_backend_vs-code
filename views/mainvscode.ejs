@@ -19,17 +19,31 @@
           <div id="icons">
             <i id="newfilei" class="ri-file-add-line"></i>
             <i class="ri-folder-3-fill"></i>
-            <i class="ri-refresh-line"></i>
+            <a href="/refresh"><i class="ri-refresh-line"></i></a>
           </div>
         </div>
-        <form id="newfile" autocomplete="off" action="/newfile" >
-          <input id="nfinput" name="filename" type="text" placeholder="New file">
+        <form id="newfile" autocomplete="off" action="/newfile">
+          <input
+            id="nfinput"
+            name="filename"
+            type="text"
+            placeholder="New file"
+          />
         </form>
         <div id="files">
           <div id="file">
             <% files.forEach(function(filename){ %>
-              <a href="/files/<%=filename%>"><h4 id="<%= filename.split('.')[1] === 'html' ? 'blue' : filename.split('.')[1] === 'css' ?  'red' : 'default' %>">
-                <i class="ri-arrow-right-s-line"></i><%= filename%></h4></a>
+            <div id="flex">
+              <a href="/files/<%=filename%>"
+                ><h4
+                  id="<%= filename.split('.')[1] === 'html' ? 'blue' : filename.split('.')[1] === 'css' ?  'red' : 'default' %>"
+                >
+                  <i class="ri-arrow-right-s-line"></i><%= filename%>
+                </h4></a
+              ><a id="vcenter" href="/delete/<%= filename%>"
+                ><i class="ri-delete-bin-line"></i
+              ></a>
+            </div>
             <% }) %>
           </div>
         </div>
