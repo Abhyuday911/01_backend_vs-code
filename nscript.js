@@ -66,13 +66,13 @@ app.get("/compilecode/:filename", function (req, res) {
     var input = 2;
     var lang = "cpp";
     if (lang === "c" || lang === "cpp") {
-        let resultPromise = cpp.runFile(`./uploads/code.cpp`, { stdin: '3\n2 ' });
+        let resultPromise = cpp.runFile(`./uploads/${req.params.filename}`, { stdin: '3\n2 ' });
         resultPromise
             .then(result => {
                 
                 fs.readdir('./uploads', function (err, data) {
                     if (err) throw err;
-                    fs.readFile(`./uploads/code.cpp`, 'utf8', function (err, magic) {
+                    fs.readFile(`./uploads/${req.params.filename}`, 'utf8', function (err, magic) {
                         if (err) throw err;
                         res.render('abhinamnahipata', { files: data, truck: magic, output: result.stdout, filename: req.params.filename })
                     });
